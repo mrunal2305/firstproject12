@@ -1,0 +1,924 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="bootstrap/bootstrap/css/bootstrap.min.css " rel="stylesheet" />
+    <script src="bootstrap/bootstrap/js/bootstrap.min.js"> </script>
+    <!-- NAvbar -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <!--         
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+        crossorigin="anonymous"></script> -->
+    <title>Document</title>
+    <style>
+        /* *{box-sizing: border-box;} */
+        body {
+            margin: 0;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            background: url(Images/nicole-wolf--xTBn1YBrTE-unsplash.jpg);
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+
+        }
+
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        /* html {
+            background-color: #eaf0f2;
+        } */
+
+        body {
+            font: 16px/1.6 Arial, sans-serif;
+        }
+
+        header {
+            text-align: center;
+            padding-top: 100px;
+            margin-bottom: 190px;
+        }
+
+        header h1 {
+            font: normal 32px/1.5 'Open Sans', sans-serif;
+            color: #3F71AE;
+            padding-bottom: 16px;
+        }
+
+        header h2 {
+            color: #F05283;
+        }
+
+        header span {
+            color: #3F71EA;
+        }
+
+
+        /* The footer is fixed to the bottom of the page */
+
+        footer {
+            position: fixed;
+            bottom: 0;
+        }
+
+        @media (max-height:800px) {
+            footer {
+                position: static;
+            }
+
+            header {
+                padding-top: 40px;
+            }
+        }
+
+        
+
+        .footer-distributed {
+            background-color: #2c292f;
+            box-sizing: border-box;
+            width: 100%;
+            text-align: left;
+            font: bold 16px sans-serif;
+            padding: 50px 50px 60px 50px;
+            margin-top: 80px;
+        }
+
+        .footer-distributed .footer-left,
+        .footer-distributed .footer-center,
+        .footer-distributed .footer-right {
+            display: inline-block;
+            vertical-align: top;
+        }
+
+        /* Footer left */
+
+        .footer-distributed .footer-left {
+            width: 30%;
+        }
+
+        .footer-distributed h3 {
+            color: #ffffff;
+            font: normal 36px 'Cookie', cursive;
+            margin: 0;
+        }
+
+        /* The company logo */
+
+        .footer-distributed .footer-left img {
+            width: 30%;
+        }
+
+        .footer-distributed h3 span {
+            color: #e0ac1c;
+        }
+
+        /* Footer links */
+
+        .footer-distributed .footer-links {
+            color: #ffffff;
+            margin: 20px 0 12px;
+        }
+
+        .footer-distributed .footer-links a {
+            display: inline-block;
+            line-height: 1.8;
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .footer-distributed .footer-company-name {
+            color: #8f9296;
+            font-size: 14px;
+            font-weight: normal;
+            margin: 0;
+        }
+
+        /* Footer Center */
+
+        .footer-distributed .footer-center {
+            width: 35%;
+        }
+
+
+        .footer-distributed .footer-center i {
+            background-color: #c7cbce;
+            color: #ffffff;
+            font-size: 25px;
+            width: 38px;
+            height: 38px;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 42px;
+            margin: 10px 15px;
+            vertical-align: middle;
+        }
+
+        .footer-distributed .footer-center i.fa-envelope {
+            font-size: 17px;
+            line-height: 38px;
+        }
+
+        .footer-distributed .footer-center p {
+            display: inline-block;
+            color: #ffffff;
+            vertical-align: middle;
+            margin: 0;
+        }
+
+        .footer-distributed .footer-center p span {
+            display: block;
+            font-weight: normal;
+            font-size: 14px;
+            line-height: 2;
+        }
+
+        .footer-distributed .footer-center p a {
+            color: #e0ac1c;
+            text-decoration: none;
+            ;
+        }
+
+
+        /* Footer Right */
+
+        .footer-distributed .footer-right {
+            width: 30%;
+        }
+
+        .footer-distributed .footer-company-about {
+            line-height: 20px;
+            color: #92999f;
+            font-size: 13px;
+            font-weight: normal;
+            margin: 0;
+        }
+
+        .footer-distributed .footer-company-about span {
+            display: block;
+            color: #ffffff;
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        .footer-distributed .footer-icons {
+            margin-top: 25px;
+        }
+
+        .footer-distributed .footer-icons a {
+            display: inline-block;
+            width: 35px;
+            height: 35px;
+            cursor: pointer;
+            background-color: #33383b;
+            border-radius: 2px;
+
+            font-size: 20px;
+            color: #ffffff;
+            text-align: center;
+            line-height: 35px;
+
+            margin-right: 3px;
+            margin-bottom: 5px;
+        }
+
+        */
+        /* Here is the code for Responsive Footer */
+        /* You can remove below code if you don't want Footer to be responsive */
+
+
+        @media (max-width: 880px) {
+
+            .footer-distributed .footer-left,
+            .footer-distributed .footer-center,
+            .footer-distributed .footer-right {
+                display: block;
+                width: 100%;
+                margin-bottom: 40px;
+                text-align: center;
+            }
+
+            .footer-distributed .footer-center i {
+                margin-left: 0;
+            }
+
+        }
+
+        .navbar {
+            overflow: hidden;
+
+        }
+
+        .navbar2 {
+            overflow: hidden;
+        }
+
+        .navbar2 a {
+            float: right;
+            display: block;
+            color: rgb(32, 32, 30);
+            text-align: center;
+            padding: 20px 20px;
+            text-decoration: none;
+        }
+
+        .navbar a {
+            float: right;
+            display: block;
+            color: ivory;
+            text-align: center;
+            padding: 20px 20px;
+            text-decoration: none;
+        }
+
+        .active {
+            background-color: gray;
+            color: white;
+        }
+
+        .navbar a:hover {
+            background-color: gray;
+
+        }
+
+        .part {
+            /* display: block; */
+            display: flex;
+            position: relative;
+        }
+
+        .part1 {
+            /* display: block; */
+            opacity: .9;
+            position: relative;
+            flex-direction: row;
+            width: 700px;
+            height: 500px;
+            background-color:  #b2e750;
+
+        }
+
+        .part2 {
+            opacity: .8;
+            flex-direction: row;
+            position: relative;
+            width: 700px;
+            font-size: 15px;
+            height: 500px;
+            background-color: #b2e750
+
+        }
+
+        @media (min-width:860px) {}
+
+        /* @media (max-width:998px )
+      {
+          html{
+              font-size: 55%;
+          }
+      }
+      @media (max-width:768px )
+      {
+          html{
+              font-size: 45%;
+          }
+      }  */
+
+
+        /* @media(max-height:800px) {
+            .container {
+                position:static;
+            }
+            } */
+
+        /* @media (max-width: 880px) {
+                .container .part  ,
+                .container  .part .part1  .navbar  .imgset 
+                .container .part  .part2 .navbar2 
+                 {
+                    display: block;
+                    width: 10%;
+                    margin-bottom: 30px;
+                    text-align: center; 
+                } 
+                }  */
+
+        .imgset {
+            margin: 60px 60px;
+
+        }
+
+
+
+        .p1 {
+            /* //top right bottom left  10px 30px 30px 30px*/
+            padding: 30px;
+            color: black;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            font-size: 20px;
+            float: right;
+        }
+
+        .marquee {
+            padding: 10px 30px 30px 30px;
+            color: rgb(12, 17, 32);
+            font-family: Georgia;
+            font-size: 30px
+        }
+
+        .btn1 {
+
+            margin: 120px;
+            margin-top: 30px;
+            float: right;
+            color: white;
+            background-color: rgba(9, 9, 46, 0.863);
+            border-radius: 5px;
+
+
+        }
+
+        .partm {
+            display: inline-block;
+            margin-top: 20px;
+            width: 100%;
+            height: 400px;
+            background-color: rgb(120, 189, 195);
+            display: flex;
+            /* background:url(Images/hitesh-choudhary-pMnw5BSZYsA-unsplash.jpg);
+background-repeat: no-repeat;
+
+
+  background-attachment: fixed;
+  background-size: cover; */
+        }
+
+        .partm1 {
+            flex-direction: row;
+            padding: 40px 40px 30px 40px;
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 40px;
+            box-shadow: gray;
+
+
+
+
+        }
+
+        .subpartm1 {
+            padding: 15px;
+            width: 300px;
+            position: relative;
+            height: 300px;
+            /* background: radial-gradient(ellipse at center), rgba(0, 128, 172, 1) 0%,
+                rgba(0, 128, 172, 1) 710%,
+                rgba(0, 128, 172, 0) 70.3%); */
+            background-color: rgba(249, 251, 250, 0.589);
+            border: 0px solid rgb(97, 92, 92);
+
+            border-radius: 30px;
+
+        }
+
+        .partm2 {
+            flex-direction: row;
+            padding: 80px;
+            font-family: 'Times New Roman', Times, serif;
+        }
+
+        .vl {
+            border-top: 3px solid gray;
+
+            height: 30px;
+            font-family: 'Times New Roman', Times, serif;
+        }
+
+        .Reg {
+            /* display: flex;
+          width: 800px;
+          height:400px;
+          background-color: cornsilk; */
+            position: relative;
+            margin: 5% auto;
+            width: 600px;
+            height: 400px;
+            background: #FFF;
+            border-radius: 2px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+
+        }
+
+        .R1 {
+            position: absolute;
+            top: 0;
+            left: 0;
+            box-sizing: border-box;
+            padding: 40px;
+            width: 300px;
+            height: 400px;
+        }
+
+        .R2 {
+            position: absolute;
+            top: 0;
+            right: 0;
+            box-sizing: border-box;
+            padding: 40px;
+            width: 300px;
+            height: 400px;
+            background: url('/Images/keith-misner-h0Vxgz5tyXA-unsplash.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+
+
+
+            background-position: center;
+            border-radius: 0 2px 2px 0;
+        }
+
+        /* h1{
+            h1 {
+  margin: 0 0 20px 0;
+  font-weight: 300;
+  font-size: 28px;
+}
+        } */
+        input[type="text"],
+        input[type="password"] {
+            display: block;
+            box-sizing: border-box;
+            margin-bottom: 20px;
+            padding: 4px;
+            width: 220px;
+            height: 32px;
+            border: none;
+            border-bottom: 1px solid #AAA;
+            font-family: 'Roboto', sans-serif;
+            font-weight: 400;
+            font-size: 15px;
+            transition: 0.2s ease;
+        }
+
+        input[type="submit"] {
+            margin-top: 28px;
+            width: 120px;
+            height: 32px;
+            background: #16a085;
+            border: none;
+            border-radius: 2px;
+            color: #FFF;
+            font-family: 'Roboto', sans-serif;
+            font-weight: 500;
+            text-transform: uppercase;
+            /* transition: 0.1s ease; */
+            cursor: pointer;
+        }
+
+        /* .social-signin{
+    width:200px;
+    margin:20px;
+    padding: 6px;
+  transition: 0.2s ease ;
+  font-family: 'Roboto', sans-serif;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+
+
+} */
+        /* button.social-signin:hover,
+button.social-signin:focus {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+  transition: 0.2s ease; */
+        .loginwith {
+            display: block;
+            margin-bottom: 30px;
+            font-size: 25px;
+            color: whitesmoke;
+            text-align: center;
+        }
+
+        .social-signin {
+            width: 200px;
+            margin: 20px;
+            padding: 6px;
+            /* flex: 1; */
+
+            border-radius: 10px;
+            color: white;
+
+            z-index: 20;
+        }
+
+        .social-signin:hover {
+
+            position: relative;
+            box-shadow: 0px 30px 30px 0 rgba(37, 37, 11, 0.7);
+            background: linear-gradient(135deg, #5d58a3, rgb(103, 241, 216), transparent);
+            border-radius: 10px;
+            transform: scale(1.1);
+            z-index: 20;
+        }
+
+        button.social-signin:active {
+            box-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
+            transition: 0.2s ease;
+        }
+
+        button.social-signin.facebook {
+            background: #32508E;
+        }
+
+        button.social-signin.twitter {
+            background: #55ACEE;
+        }
+
+        button.social-signin.google {
+            background: #DD4B39;
+        }
+
+        .or {
+            position: absolute;
+            top: 180px;
+            left: 280px;
+            width: 40px;
+            height: 40px;
+            background: #DDD;
+            border-radius: 50%;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+            line-height: 40px;
+            text-align: center;
+        }
+
+        .btn2 {
+            width: 90px;
+            height: 30px;
+        }
+
+        .courses {
+            display: flex;
+            margin-top: 40px;
+            width: 1100px;
+            margin-left: 12px;
+            height: 300px;
+            background: url(/Images/walling-XLqiL-rz4V8-unsplash.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+
+        }
+
+        .CS {
+
+            width: 365px;
+            height: 200px;
+            /* background-color: white; */
+            /* transform:scale(1.5) ; */
+            /* opacity: 0.5; */
+
+        }
+
+        .CS:hover {
+            transform: scale(1.1);
+            box-shadow: 0px 10px 20px 0px rgba(116, 116, 160, 0.7);
+            /* z-index: 30; */
+
+
+        }
+
+
+        .cs1 {
+            flex: 1;
+            /* width: 250px ;
+            height: 200px; */
+            background: linear-gradient(135deg, #d5d4eb, rgb(207, 228, 224), transparent);
+            margin: 30px;
+
+        }
+
+        .cs2 {
+            flex: 1;
+            /* width: 250px ;
+            height: 200px; */
+            background: linear-gradient(135deg, #cab5ae, #e2bea7, transparent);
+            margin: 30px;
+        }
+
+
+        .cs3 {
+            flex: 1;
+            /* width: 250px ;
+            height: 200px; */
+            background: linear-gradient(135deg, #e2b9db, #e4c9df, transparent);
+            margin: 30px;
+        }
+
+
+
+        h2 {
+            background-color: rgb(22, 17, 22);
+            color: whitesmoke;
+            width: 90%;
+            height: 30px;
+            text-align: center;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            margin: 4px;
+            border-radius: 10px;
+            margin-left: 20px;
+            /* position: relative; */
+            /* box-shadow: 0 4px 1px 8px gray; */
+        }
+
+        .pcs {
+            margin: 12px;
+            /* -webkit-font-smoothing: antialiased; */
+
+        }
+
+        .continue {
+            display: flex;
+            justify-content: center;
+            /* transition: all .2s cubic-bezier(.54,.01,.1,1);
+            position: relative;
+    overflow: hidden; */
+        }
+
+        /* .continue:before{
+            content: "";
+    display: block;
+    position: absolute;
+    z-index: 0;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #7a1537;
+    transition: all .5s cubic-bezier(.54,.01,.1,1);
+        } */
+
+        button {
+            width: 80%;
+            margin: 15px;
+            padding: 10px;
+            border-radius: 23px;
+            border: none;
+            color: rgb(146, 130, 130);
+            font-size: 16px;
+            /* display: flex; */
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            background-color: rgb(233, 233, 232);
+
+            /* transition: all .2s cubic-bezier(.54,.01,.1,1); */
+
+
+/* 
+        }
+        .container .part .part1 .navbar a {
+            position: relative;
+            color: #000;
+            font-size: 1em;
+            font-weight: 500;
+            text-decoration: none;
+            margin-left: 30px;
+            /* transition: 0.3s ease; */
+        }
+
+         /* .container .part .part1 .navbar a:before{
+                content: '';
+                position:absolute;
+                background: #000;
+                width: 0;
+                height: 3px;
+                bottom: 0;
+                left:0;
+         }
+                .container .part .part1 .navbar a:hover{
+                width: 100%;
+                }    */ */
+
+        
+    </style>
+</head>
+
+<body class="container">
+    <div class="part">
+        <div class="part1">
+            <div class="navbar">
+                <a href="#home" class="active">Home</a>
+                <a href="#about">About</a>
+
+                <a href="#contact">Contact</a>
+                <a href="#news">FAQ</a>
+            </div>
+            <img class="imgset" src="Images/crescent.jpg">
+        </div>
+        <div class="part2">
+            <div class="navbar2">
+                <a href="signin.html"> <input type="button" name="" value="Sign up" class="btn2"></a>
+            </div>
+
+
+
+            <div class="marquee p1">
+                <marquee behavior="scroll" direction="left" bgcolor="" scrollamount="10">Welcome to Crescent Web
+                    Technology 
+                </marquee>
+            </div>
+            <div>
+                <p class="p1" ; style="color: whitesmoke; font-size: 30px;">IT's time to start<br> investing in
+                    yourself</p>
+            </div>
+            <div>
+                <p class="p1" ; style="margin:3px 40px;">Because learning to code<br> might be easier way<br> to
+                    boost your career.</p>
+            </div>
+            <!-- <div class="marquee2 p1">
+                <marquee behavior="slide" direction="left" scrollamount="10">Because learning to code<br> might be easier way<br> to boost your career. </marquee> -->
+
+
+        </div>
+
+        <!-- <input type="button" name="" value="Get Started" class="btn1" class="btn btn-success"> -->
+
+    </div>
+    </div>
+    </div>
+    </div>
+
+    <div class="partm">
+        <div class="partm1">
+
+            <div class="subpartm1">
+                <p>To be a programmer <br>all you need is <span>Consistency.. </span> </p>
+            </div>
+        </div>
+        <div class="partm2">
+            <h1>Learn by doing</h1>
+            <div class="vl"></div>
+            <p>From Building Websites to analyzing data,<br> the choice is yours. No matter your experience level,
+                <br>you'll be writing real, working code in minutes.
+            </p>
+            <h1 style="margin-top: 25px;">Put your learning into practice</h1>
+            <div class="vl"></div>
+
+            <p>Apply your learning with real-world project and learn everything you need to take your career to the next
+                level.</p>
+        </div>
+    </div>
+
+
+    <!-- <div class="Reg">
+        <div class="R1">
+            <h1>Sign up</h1>
+            <input type="text" name="username" placeholder="Username" />
+            <input type="text" name="email" placeholder="E-mail" />
+            <input type="password" name="password" placeholder="Password" />
+            <input type="password" name="password2" placeholder="Retype password" />
+
+            <input type="submit" name="signup_submit" value="Sign me up" />
+        </div>
+        <div class="R2">
+            <span class="loginwith">Sign in with<br />social network</span>
+
+            <button class="social-signin facebook">Log in with facebook</button>
+            <button class="social-signin twitter">Log in with Twitter</button>
+            <button class="social-signin google">Log in with Google+</button>
+        </div>
+        <div class="or">OR</div>
+    </div> -->
+  
+        <div class="courses">
+            <div class="CS cs1 ">
+                <h2>Learn Python</h2>
+                <div> <img src="" class="img1"></div>
+                <p class="pcs">Build Your Python Basic with Crescent Web </p>
+                <button class="continue">Continue</button>
+            </div>
+            <div class="CS cs2">
+                <h2>Full Stack Development</h2>
+                <div> <img src="" class="img1"></div>
+                <p class="pcs">Build Your Full Stack Skills with Crescent Web </p>
+                <button class="continue">Continue</button>
+            </div>
+            <div class="CS cs3">
+                <h2>Web Development Program</h2>
+                <div> <img src="" class="img1"></div>
+                <p class="pcs">Be a successfull Web Developer with Crescent Web </p>
+                <button class="continue">Continue</button>
+            </div>
+
+
+
+        </div>
+
+
+
+
+        <div>
+
+
+            <footer class="footer-distributed">
+
+                <div class="footer-left">
+                    <img src="img/logo.png">
+                    <h3>About<span>Crescent</span></h3>
+
+                    <p class="footer-links">
+                        <a href="#">Home</a>
+                        |
+                        <a href="#">Blog</a>
+                        |
+                        <a href="#">About</a>
+                        |
+                        <a href="#">Contact</a>
+                    </p>
+
+                    <p class="footer-company-name">© 2019 Crescent Web Technology Pvt. Ltd.</p>
+                </div>
+
+                <div class="footer-center">
+                    <div>
+                        <i class="fa fa-map-marker"></i>
+                        <p><span>PLOT NO 216 DEVLAXMI APPARTMENT , NANDANVAN MAIN ROAD , Nagpur,<br>
+                                Maharashtra-440009</span>
+                        </p>
+                    </div>
+
+                    <div>
+                        <i class="fa fa-phone"></i>
+                        <p> +91 -7709644420</p>
+                    </div>
+                    <div>
+                        <i class="fa fa-envelope"></i>
+                        <p><a href="mailto:support@eduonix.com">support@eduonix.com</a></p>
+                    </div>
+                </div>
+                <div class="footer-right">
+                    <p class="footer-company-about">
+                        <span>About the company</span>
+                        We offer training and skill building courses across Technology, Design, Management, Science and
+                        Humanities.
+                    </p>
+                    <div class="footer-icons">
+                        <a href="#"><i class="fa fa-facebook"></i></a>
+                        <a href="#"><i class="fa fa-twitter"></i></a>
+                        <a href="#"><i class="fa fa-instagram"></i></a>
+                        <a href="#"><i class="fa fa-linkedin"></i></a>
+                        <a href="#"><i class="fa fa-youtube"></i></a>
+                    </div>
+                </div>
+            </footer>
+        </div>
+  
+
+</body>
+
+</html>
