@@ -510,6 +510,7 @@ hr{
 .banner-text-2 h5{
     font-size:5rem;
     font-family: "Brush Script MT", cursive; 
+    background-color: black transparent;
     z-index:55;
 }
 hr{
@@ -583,6 +584,7 @@ hr{
     .banner-text-2 h5{
         font-size:2rem;
         font-family: "Brush Script MT", cursive; 
+        background-color: black transparent;
         z-index:5;
     }
 
@@ -603,8 +605,9 @@ hr{
 .container3{
     margin-top:-20px;
 }
-img:hover{
+.Img-size:hover{
     transform: scale(1.1);
+    box-shadow: 0px 10px 20px 0px rgba(116, 116, 160, 0.7);
   
 }
 .menu{
@@ -656,8 +659,8 @@ img:hover{
         height: 243px;
     
     }
-    img:hover{
-        transform: scale(1.1);
+    .Img-size:hover{
+        transform: scale(1.0);
     }
     .menu{
         color: black;
